@@ -1,0 +1,37 @@
+@model User
+
+<form asp-controller="User" asp-action="Create" method="POST">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="DojoLocation"></label>
+        <span asp-validation-for="DojoLocation" class="text-danger"></span>
+        <select asp-for="DojoLocation" type="text" class="form-control">
+                <option value="San Jose"> San Jose  </option>
+                <option value="New York"> New York </option>
+                <option value="New England">New England</option>
+                <option value="San Juan">San Juan</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="FavoriteLanguage"></label>
+        <span asp-validation-for="FavoriteLanguage" class="text-danger"></span>
+        <select asp-for="FavoriteLanguage" type="text" class="form-control">
+                <option value="C#">C#</option>
+                <option value="Java">Java</option>
+                <option value="Html">Html</option>
+                <option value="Css">Css</option>
+                <option value="Python">Python</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Comment"></label>
+        <span asp-validation-for="Comment" class="text-danger"></span>
+        <textarea asp-for="Comment" class="form-control" rows="4" cols="50" ></textarea>
+    </div>
+    <button>Submit</button>
+</form>
